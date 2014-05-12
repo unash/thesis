@@ -1,0 +1,2182 @@
+{
+	"item.taobao.com/item.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"id":"商品ID"
+			},
+			"pageClass":"PRODPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"商品详情页",
+			"withParams":[
+				{
+					"typeCondition":{
+						"id":"[0-9]+"
+					},
+					"typeName":"商品详情页"
+				}
+			],
+			"defaultTypeName":"商品详情页"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"查看商品详情",
+			"diffWithPrePage":{
+				"defaultPage":"查看商品详情"
+			},
+			"defaultActionName":"查看商品详情"
+		}
+	},
+	"www.taobao.com/":{
+		"pageInfo":{
+			"usefulParams":{
+				"spm":"来源追踪"
+			},
+			"pageClass":"HOME"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"淘宝主页",
+			"defaultTypeName":"淘宝主页"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"进入淘宝主页",
+			"defaultActionName":"进入淘宝主页"
+		}
+	},
+	"search.taobao.com/search":{
+		"pageInfo":{
+			"usefulParams":{
+				"q":"",
+				"cat":"",
+				"ppath":"",
+				"bcoffset":"",
+				"s":""
+			},
+			"pageClass":"SEARCH"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"推荐性商品列表",
+			"withParams":[
+				{
+					"typeCondition":{
+						"app":"api"
+					},
+					"typeName":"页面成分"
+				},
+				{
+					"typeCondition":{
+						"q":".+",
+						"app":"shopsearch"
+					},
+					"typeName":"店铺检索结果列表"
+				},
+				{
+					"typeCondition":{
+						"app":"shopsearch"
+					},
+					"typeName":"推荐性店铺列表"
+				},
+				{
+					"typeCondition":{
+						"q":".+"
+					},
+					"typeName":"商品检索结果列表"
+				}
+			],
+			"defaultTypeName":"商品检索结果列表"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"输入检索词检索",
+			"sameWithPrePage":[
+				{
+					"paramChange":"sort=mod|sort=add",
+					"actionName":"排序检索列表"
+				},
+				{
+					"paramChange":"cps=add|cps=mod|ppath=add|ppath=mod|tab=add|tab=mod",
+					"actionName":"筛选检索列表"
+				},
+				{
+					"paramChange":"s=add|s=mod",
+					"actionName":"翻页检索列表"
+				}
+			],
+			"defaultActionName":"处理检索结果列表"
+		}
+	},
+	"s.taobao.com/search":{
+		"similarPage":"search.taobao.com/search"
+	},
+	"s8.taobao.com/search":{
+		"pageInfo":{
+			"usefulParams":{
+				"q":"",
+				"cat":"",
+				"ppath":"",
+				"bcoffset":"",
+				"s":""
+			},
+			"pageClass":"SEARCH"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"不确定的不稳定状态",
+			"withParams":[
+				{
+					"typeCondition":{
+						"q":".+"
+					},
+					"typeName":"商品检索结果列表"
+				}
+			],
+			"defaultTypeName":"商品检索结果列表"
+		},
+		"userActionRules":{
+			"sameWithPrePage":[
+				{
+					"paramChange":"sort=mod|sort=add",
+					"actionName":"排序检索列表"
+				},
+				{
+					"paramChange":"cps=add|cps=mod|ppath=add|ppath=mod|tab=add|tab=mod",
+					"actionName":"筛选检索列表"
+				},
+				{
+					"paramChange":"s=add|s=mod",
+					"actionName":"翻页检索列表"
+				}
+			],
+			"defaultActionName":"处理检索结果列表"
+		}
+	},
+	"trade.taobao.com/trade/itemlist/list_bought_items.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"已购商品列表页",
+			"defaultTypeName":"已购商品列表页"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"个人资料管理行为",
+			"sameWithPrePage":[
+				{
+					"paramChange":"queryBizType=add|queryBizType=mod",
+					"actionName":"筛选资源列表"
+				},
+				{
+					"paramChange":"pageNum=add|pageNum=mod",
+					"actionName":"翻页资源列表"
+				}
+			],
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"wuliu.taobao.com/user/order_detail_new.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"trade_id":"",
+				"seller_id":""
+			},
+			"pageClass":"UNUSE"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"卖家物流管理页面",
+			"defaultTypeName":"卖家物流管理页面"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"卖家物流管理行为",
+			"defaultActionName":"卖家物流管理行为"
+		}
+	},
+	"login.taobao.com/member/loginByIm.do":{
+		"pageInfo":{
+			"usefulParams":{
+				"defaulturl":""
+			},
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"淘宝主页",
+			"withParams":[
+				{
+					"typeCondition":{
+						"defaulturl":".+"
+					},
+					"typeName":"用户登录页面"
+				}
+			],
+			"defaultTypeName":"用户登录页面"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"用户主动登录",
+			"diffWithPrePage":{
+				"defaultPage":"用户被动登录"
+			},
+			"defaultActionName":"用户登录行为"
+		}
+	},
+	"container.api.taobao.com/container":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"appkey":".+"
+					},
+					"typeName":"页面成分"
+				}
+			],
+			"defaultTypeName":"页面成分"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"获取页面成分",
+			"defaultActionName":"获取页面成分"
+		}
+	},
+	"click.simba.taobao.com/cc_im":{
+		"pageInfo":{
+			"usefulParams":{
+				"e":""
+			},
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"不确定的不稳定状态",
+			"withParams":[
+				{
+					"typeCondition":{
+						"e":".+"
+					},
+					"typeName":"可确定的不稳定状态"
+				}
+			],
+			"defaultTypeName":"不稳定状态"
+		},
+		"userActionRules":{
+			"defaultActionName":"系统执行跳转"
+		}
+	},
+	"trade.taobao.com/trade/pay_success.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"biz_order_id":""
+			},
+			"pageClass":"SUCCESS"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"biz_order_id":".+"
+					},
+					"typeName":"支付宝付款页面"
+				}
+			],
+			"defaultTypeName":"支付宝付款页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"支付宝付款"
+		}
+	},
+	"s.click.taobao.com/t":{
+		"pageInfo":{
+			"usefulParams":{
+				"e":""
+			},
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"淘宝主页",
+			"withParams":[
+				{
+					"typeCondition":{
+						"e":".+"
+					},
+					"typeName":"可确定的不稳定状态"
+				}
+			],
+			"defaultTypeName":"可确定的不稳定状态"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看详情"
+		}
+	},
+	"i.taobao.com/my_taobao.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"会员管理页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"trade.taobao.com/trade/detail/tradeSnap.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"tradeID":""
+			},
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"交易快照页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看交易快照"
+		}
+	},
+	"trade.taobao.com/trade/itemlist/listBoughtItems.htm":{
+		"similarPage":"trade.taobao.com/trade/itemlist/list_bought_items.htm"
+	},
+	"admin.uz.taobao.com/index.do":{
+		"pageInfo":{
+			"usefulParams":{
+				"url":""
+			},
+			"pageClass":"INFORPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"空白页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"url":".+"
+					},
+					"typeName":"可确定的不稳定状态"
+				},
+				{
+					"typeCondition":{
+						"jsonp":".+"
+					},
+					"typeName":"页面成分"
+				}
+			],
+			"defaultTypeName":"无效页面"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"用户行为",
+			"defaultActionName":"系统行为"
+		}
+	},
+	"trade.taobao.com/trade/trade_success.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"alipay_no":"",
+				"seller_id":"",
+				"biz_order_id":""
+			},
+			"pageClass":"SUCCESS"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"确认收货页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"买家交易行为"
+		}
+	},
+	"ju.taobao.com/tg/home.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"itemId":""
+			},
+			"pageClass":"INFORPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"营销主页",
+			"withParams":[
+				{
+					"typeCondition":{
+						"id":".+"
+					},
+					"typeName":"营销详情页"
+				},
+				{
+					"typeCondition":{
+						"itemId":".+"
+					},
+					"typeName":"营销详情页"
+				}
+			],
+			"defaultTypeName":"营销主页"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"查看营销详情",
+			"sameWithPrePage":[
+				{
+					"paramChange":"id=mod|id=add|itemId=mod|itemId=add",
+					"actionName":"查看营销详情"
+				}
+			],
+			"defaultActionName":"查看营销详情"
+		}
+	},
+	"trade.taobao.com/trade/detail/trade_item_detail.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"bizOrderId":""
+			},
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"bizOrderId":".+"
+					},
+					"typeName":"交易详情页面"
+				},
+				{
+					"typeCondition":{
+						"biz_order_id":".+"
+					},
+					"typeName":"交易详情页面"
+				},
+				{
+					"typeCondition":{
+						"outTradeNo":".+"
+					},
+					"typeName":"交易详情页面"
+				}
+			],
+			"defaultTypeName":"交易详情页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看交易详情"
+		}
+	},
+	"trade.taobao.com/trade/confirm_goods.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"biz_order_id":""
+			},
+			"pageClass":"SUCCESS"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"biz_order_id":".+"
+					},
+					"typeName":"确认交易页面"
+				}
+			],
+			"defaultTypeName":"确认交易页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"确认交易"
+		}
+	},
+	"favorite.taobao.com/collect_list.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"INRORPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"商品收藏页面"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"个人资料管理行为",
+			"diffWithPrePage":{
+				"defaultPage":"个人资料管理行为"
+			},
+			"sameWithPrePage":[
+				{
+					"paramChange":"frontCategory=add|frontCategory=mod|isPromotion=add|isPromotion=del|isPromotion=mod|invalid=add|invalid=del|invalid=mod|listByShop=add|listByShop=del|listByShop=mod",
+					"actionName":"筛选资源列表"
+				},
+				{
+					"paramChange":"orderby=add|orderby=mod",
+					"actionName":"排序资源列表"
+				}
+			],
+			"defaultActionName":"处理个人资源"
+		}
+	},
+	"vip.taobao.com/vip_home.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"INFORPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"淘宝会员主页"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看会员活动"
+		}
+	},
+	"trade.taobao.com/trade/itemlist/list_sold_items.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"UNUSE"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"已售商品列表页"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"个人资料管理行为",
+			"diffWithPrePage":{
+				"defaultPage":"个人资料管理行为"
+			},
+			"defaultActionName":"处理个人资源"
+		}
+	},
+	"login.taobao.com/member/logout.jhtml":{
+		"pageInfo":{
+			"usefulParams":{
+				"redirectURL":""
+			},
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"用户登出页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"用户登出"
+		}
+	},
+	"try.taobao.com/item.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"id":""
+			},
+			"pageClass":"INFORPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"id":".+"
+					},
+					"typeName":"营销详情页"
+				}
+			],
+			"defaultTypeName":"营销详情页"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看营销详情"
+		}
+	},
+	"mai.taobao.com/seller_admin.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"UNUSE"
+		},
+		"pageTypeRules":{
+			"withParams":[
+				{
+					"typeCondition":{
+						"svid":".+"
+					},
+					"typeName":"卖家中心页面"
+				}
+			],
+			"defaultTypeName":"卖家中心页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"redirect.simba.taobao.com/rd":{
+		"pageInfo":{
+			"usefulParams":{
+				"f":""
+			},
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"淘宝主页",
+			"withParams":[
+				{
+					"typeCondition":{
+						"f":".+"
+					},
+					"typeName":"可确定的不稳定状态"
+				}
+			],
+			"defaultTypeName":"可确定的不稳定状态"
+		},
+		"userActionRules":{
+			"defaultActionName":"系统执行跳转"
+		}
+	},
+	"cart.taobao.com/my_cart.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"我的购物车页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看购物车"
+		}
+	},
+	"webwangwang.taobao.com/send.do":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"页面成分"
+		},
+		"userActionRules":{
+			"defaultActionName":"获取页面成分"
+		}
+	},
+	"store.taobao.com/shop/view_shop.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				"user_number_id":"",
+				"shop_id":""
+			},
+			"pageClass":"BRANDPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"user_number_id":".+"
+					},
+					"typeName":"店铺详情页"
+				}
+			],
+			"defaultTypeName":"店铺详情页"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看店铺详情"
+		}
+	},
+	"vip.taobao.com/tjb/user_coin_detail.htm":{
+		"pageInfo":{
+			"usefulParams":{
+				
+			},
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"淘金币管理页"
+		},
+		"userActionRules":{
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"trade.taobao.com/trade/detail/trade_snap.htm":{
+		"similarPage":"trade.taobao.com/trade/detail/tradeSnap.htm"
+	},
+	"www.taobao.com/index_inc/2010c/includes/get-services.php":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"页面成分",
+			"withParams":[
+				{
+					"typeCondition":{
+						"cd":".+"
+					},
+					"typeName":""
+				}
+			],
+			"defaultTypeName":"页面成分"
+		},
+		"userActionRules":{
+			"defaultActionName":"获取页面成分"
+		}
+	},
+	"chongzhi.taobao.com/item.do":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"充值平台页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"buy.taobao.com/auction/buy_now.jhtml":{
+		"pageInfo":{
+			"pageClass":"SUCCESS"
+		},
+		"pageTypeRules":{
+			"withParams":[
+				{
+					"typeCondition":{
+						"item_id_num":".+"
+					},
+					"typeName":"确认订单信息页面"
+				}
+			],
+			"defaultTypeName":"确认订单信息页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"确定订单信息"
+		}
+	},
+	"rate.taobao.com/remarkSeller4C.htm":{
+		"pageInfo":{
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"商品评价页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"交易评价"
+		}
+	},
+	"vip.taobao.com/":{
+		"similarPage":"vip.taobao.com/vip_home.htm"
+	},
+	"vip.taobao.com/items/exchange_items.htm":{
+		"pageInfo":{
+			"pageClass":"INFORPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"全额兑换页"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"查看会员活动",
+			"diffWithPrePage":{
+				"defaultPage":"查看会员活动"
+			},
+			"sameWithPrePage":[
+				{
+					"paramChange":"exchange_level=add|exchange_level=mod",
+					"actionName":"查看会员活动"
+				}
+			],
+			"defaultActionName":"查看会员活动"
+		}
+	},
+	"list.taobao.com/itemlist/default.htm":{
+		"pageInfo":{
+			"pageClass":"HOME"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"商品类目展示列表",
+			"withParams":[
+				{
+					"typeCondition":{
+						"json":".+"
+					},
+					"typeName":"页面成分"
+				}
+			],
+			"defaultTypeName":"商品类目展示列表"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"浏览类目",
+			"diffWithPrePage":{
+				"defaultPage":"浏览类目"
+			},
+			"sameWithPrePage":[
+				{
+					"paramChange":"q=add|q=mod",
+					"actionName":"输入检索词检索"
+				},
+				{
+					"paramChange":"cat=add|cat=mod|ppath=mod|ppath=add",
+					"actionName":"筛选浏览列表"
+				},
+				{
+					"paramChange":"sort=add|sort=mod",
+					"actionName":"排序浏览列表"
+				},
+				{
+					"paramChange":"s=add|s=mod",
+					"actionName":"翻页浏览列表"
+				}
+			],
+			"defaultActionName":"处理浏览结果列表"
+		}
+	},
+	"siteadmin.taobao.com/module/edit/itemRecommend.htm":{
+		"pageInfo":{
+			"pageClass":"unknow",
+			"pageUpdated":"true"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"我的淘宝页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"tbskip.taobao.com/cbu.htm":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"空白页面",
+			"defaultTypeName":"空白页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"系统行为"
+		}
+	},
+	"rate.taobao.com/userTagInfo.htm":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"空白页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"userNumId":".+"
+					},
+					"typeName":"页面成分"
+				}
+			],
+			"defaultTypeName":"页面成分"
+		},
+		"userActionRules":{
+			"defaultActionName":"系统行为"
+		}
+	},
+	"buy.taobao.com/auction/order/unity_order_confirm.htm":{
+		"pageInfo":{
+			"pageClass":"SUCCESS"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"确认订单信息页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"确定订单信息"
+		}
+	},
+	"yingyong.taobao.com/show.htm":{
+		"pageInfo":{
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"app_id":".+"
+					},
+					"typeName":"可确定的不稳定状态"
+				}
+			],
+			"defaultTypeName":"可确定的不稳定状态"
+		},
+		"userActionRules":{
+			"defaultActionName":"系统行为"
+		}
+	},
+	"sell.taobao.com/auction/goods/goods_on_sale.htm":{
+		"pageInfo":{
+			"pageClass":"UNUSE"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"出售中的商品页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看出售中的商品"
+		}
+	},
+	"upload.taobao.com/auction/publish/edit.htm":{
+		"pageInfo":{
+			"pageClass":"UNUSE"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"item_num_id":".+"
+					},
+					"typeName":"商品信息管理页"
+				}
+			],
+			"defaultTypeName":"商品信息管理页"
+		},
+		"userActionRules":{
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"shopsearch.taobao.com/search":{
+		"pageInfo":{
+			"pageClass":"SEARCH"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"店铺检索主页",
+			"withParams":[
+				{
+					"typeCondition":{
+						"q":".+"
+					},
+					"typeName":"店铺检索结果列表"
+				}
+			],
+			"defaultTypeName":"店铺检索结果列表"
+		},
+		"userActionRules":{
+			"defaultActionName":"处理检索结果列表"
+		}
+	},
+	"ershou.taobao.com/item.htm":{
+		"pageInfo":{
+			"pageClass":"HOME"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"q":".+"
+					},
+					"typeName":"频道详情页"
+				}
+			],
+			"defaultTypeName":"频道详情页"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看频道详情"
+		}
+	},
+	"click.mz.simba.taobao.com/ecpm":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"不确定的不稳定状态",
+			"withParams":[
+				{
+					"typeCondition":{
+						"e":".+"
+					},
+					"typeName":"可确定的不稳定状态"
+				},
+				{
+					"typeCondition":{
+						"u":".+"
+					},
+					"typeName":"可确定的不稳定状态"
+				}
+			],
+			"defaultTypeName":"可确定的不稳定状态"
+		},
+		"userActionRules":{
+			"defaultActionName":"系统行为"
+		}
+	},
+	"ju.taobao.com/tg/today_items.htm":{
+		"similarPage":"ju.taobao.com/tg/home.htm"
+	},
+	"s.taobao.com/interfaces/shopinfo_proxy.php":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"商品检索主页"
+		},
+		"userActionRules":{
+			"defaultActionName":"进入检索主页"
+		}
+	},
+	"buy.taobao.com/auction/order/confirm_order.htm":{
+		"pageInfo":{
+			"pageClass":"SUCCESS"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"确认订单信息页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"确定订单信息"
+		}
+	},
+	"taojinbi.taobao.com/home/home_new.htm":{
+		"pageInfo":{
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"淘宝会员主页"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看会员活动"
+		}
+	},
+	"store.taobao.com/":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"shop_id":".+"
+					},
+					"typeName":"店铺详情页"
+				}
+			],
+			"defaultTypeName":"错误页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看店铺详情"
+		}
+	},
+	"try.taobao.com/fuyou.htm":{
+		"pageInfo":{
+			"pageClass":"INFORPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"营销主页"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看淘宝营销"
+		}
+	},
+	"meal.taobao.com/mealDetail.htm":{
+		"pageInfo":{
+			"pageClass":"PRODPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"meal_id":".+"
+					},
+					"typeName":"营销详情页"
+				}
+			],
+			"defaultTypeName":"营销详情页"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看营销详情"
+		}
+	},
+	"siteadmin.taobao.com/design.htm":{
+		"pageInfo":{
+			"pageClass":"unknow",
+			"pageUpdated":"true"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"我的淘宝页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"rate.taobao.com/myRate.htm":{
+		"pageInfo":{
+			"pageClass":"ADMIPG"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"历史评价管理页",
+			"withParams":[
+				{
+					"typeCondition":{
+						"banner":".+"
+					},
+					"typeName":"历史评价管理页"
+				},
+				{
+					"typeCondition":{
+						"mytmenu":".+"
+					},
+					"typeName":"历史评价管理页"
+				}
+			],
+			"defaultTypeName":"历史评价管理页"
+		},
+		"userActionRules":{
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"ju.taobao.com/tg/ju_brand_list.htm":{
+		"pageInfo":{
+			"pageClass":"INFORPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"营销主页"
+		},
+		"userActionRules":{
+			"defaultActionName":"查看淘宝营销"
+		}
+	},
+	"list.bendi.taobao.com//provider/JsonAreaList.htm":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"页面成分",
+			"withParams":[
+				{
+					"typeCondition":{
+						"city":".+"
+					},
+					"typeName":"页面成分"
+				}
+			],
+			"defaultTypeName":"页面成分"
+		},
+		"userActionRules":{
+			"defaultActionName":"系统行为"
+		}
+	},
+	"chongzhi.taobao.com/index.do":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"充值平台页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"个人资料管理行为"
+		}
+	},
+	"tejia.taobao.com/tejia_list.htm":{
+		"pageInfo":{
+			"pageClass":"INFORPG"
+		},
+		"pageTypeRules":{
+			"defaultTypeName":"营销主页"
+		},
+		"userActionRules":{
+			"invalidPreUrl":"查看淘宝营销",
+			"diffWithPrePage":{
+				"defaultPage":"查看淘宝营销"
+			},
+			"sameWithPrePage":[
+				{
+					"paramChange":"promotionId=mod|promotionId=add|cid=add|cid=mod",
+					"actionName":"筛选浏览列表"
+				}
+			],
+			"defaultActionName":"处理浏览结果列表"
+		}
+	},
+	"trade.taobao.com/trade/pay.htm":{
+		"pageInfo":{
+			"pageClass":"SUCCESS"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"biz_order_id":".+"
+					},
+					"typeName":"支付阶段页面"
+				}
+			],
+			"defaultTypeName":"支付阶段页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"买家交易行为"
+		}
+	},
+	"www.taobao.com/view_image.php":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"空白页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"pic":".+"
+					},
+					"typeName":"页面成分"
+				}
+			],
+			"defaultTypeName":"页面成分"
+		},
+		"userActionRules":{
+			"defaultActionName":"系统行为"
+		}
+	},
+	"act.ju.taobao.com/go/rgn/juhuasuan/hp/api-banner-multicity.php":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"页面成分",
+			"withParams":[
+				{
+					"typeCondition":{
+						"city":".+"
+					},
+					"typeName":"页面成分"
+				}
+			],
+			"defaultTypeName":"页面成分"
+		},
+		"userActionRules":{
+			"defaultActionName":"系统行为"
+		}
+	},
+	"trade.taobao.com/trade/tradeStatusDispatcher.htm":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"bizOrderId":".+"
+					},
+					"typeName":"归档阶段页面"
+				}
+			],
+			"defaultTypeName":"归档阶段页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"交易行为"
+		}
+	},
+	"trade.taobao.com/trade/logistics_status.htm":{
+		"pageInfo":{
+			"pageClass":"unknow"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"错误页面",
+			"withParams":[
+				{
+					"typeCondition":{
+						"biz_order_id":".+"
+					},
+					"typeName":"交易页面"
+				}
+			],
+			"defaultTypeName":"交易页面"
+		},
+		"userActionRules":{
+			"defaultActionName":"交易行为"
+		}
+	},
+	"re.taobao.com/search":{
+		"pageInfo":{
+			"pageClass":"SEARCH"
+		},
+		"pageTypeRules":{
+			"hasNoParams":"淘宝频道展示列表",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "keyword": ".+"
+                    },
+                    "typeName": "淘宝频道展示列表"
+                }
+            ],
+            "defaultTypeName": "淘宝频道展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看淘宝频道"
+        }
+    },
+    "taojinbi.taobao.com/detail/activity_executor.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "页面成分"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "vip.taobao.com/list/category_auctions.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "特权商品页"
+        },
+        "userActionRules": {
+            "invalidPreUrl": "查看会员活动",
+            "diffWithPrePage": {
+                "defaultPage": "查看会员活动"
+            },
+            "sameWithPrePage": [
+                {
+                    "paramChange": "first_category_id=mod|second_category_id=add|first_category_id=add|second_category_id=mod",
+                    "actionName": "查看会员活动"
+                },
+                {
+                    "paramChange": "sort=mod|sort=add",
+                    "actionName": "查看会员活动"
+                }
+            ],
+            "defaultActionName": "查看会员活动"
+        }
+    },
+    "login.taobao.com/aso/aso": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "domain": ".+"
+                    },
+                    "typeName": "用户登录页面"
+                }
+            ],
+            "defaultTypeName": "用户登录页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "用户被动登录"
+        }
+    },
+    "sell.taobao.com/auction/goods/goods_in_stock.htm": {
+        "pageInfo": {
+            "pageClass": "UNUSE"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "仓库商品管理页"
+        },
+        "userActionRules": {
+            "defaultActionName": "个人资料管理行为"
+        }
+    },
+    "s8.taobao.com/interfaces/shopinfo_proxy.php": {
+        "pageInfo": {
+            "pageClass": "unknow",
+            "pageUpdated": "true"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "空白页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "detail.taobao.com/meal_detail.htm": {
+        "similarPage": "meal.taobao.com/mealDetail.htm"
+    },
+    "ju.taobao.com/index.htm": {
+        "similarPage": "ju.taobao.com/tg/home.htm"
+    },
+    "ttl.taobao.com/": {
+        "pageInfo": {
+            "pageClass": "BRANDPG",
+            "pageUpadated": "true"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "店铺详情页"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看店铺详情"
+        }
+    },
+    "vip.taobao.com/tjb/raffle.htm": {
+        "pageInfo": {
+            "pageClass": "ADMIPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "淘金币抽奖页"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看会员活动"
+        }
+    },
+    "vip.taobao.com/tjb/introduction.htm": {
+        "pageInfo": {
+            "pageClass": "ADMIPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "淘金币管理页"
+        },
+        "userActionRules": {
+            "defaultActionName": "个人资料管理行为"
+        }
+    },
+    "refund.taobao.com/view_refund_detail.htm": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "refundId": ".+"
+                    },
+                    "typeName": "退款管理页面"
+                }
+            ],
+            "defaultTypeName": "退款管理页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "退款管理"
+        }
+    },
+    "taojinbi.taobao.com/crossdomain.htm": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "空白页面",
+            "defaultTypeName": "空白页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "list.taobao.com/itemlist/jiaju.htm": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "商品类目展示列表",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "json": "on"
+                    },
+                    "typeName": "页面成分"
+                }
+            ],
+            "defaultTypeName": "商品类目展示列表"
+        },
+        "userActionRules": {
+            "invalidPreUrl": "浏览类目",
+            "diffWithPrePage": {
+                "defaultPage": "浏览类目"
+            },
+            "sameWithPrePage": [
+                {
+                    "paramChange": "q=mod|q=add",
+                    "actionName": "输入检索词检索"
+                },
+                {
+                    "paramChange": "cat=add|sd=add|isprepay=add|cat=mod|sdcat=mod|isprepaycat=mod",
+                    "actionName": "筛选浏览列表"
+                },
+                {
+                    "paramChange": "sort=add|sort=mod",
+                    "actionName": "排序浏览列表"
+                }
+            ],
+            "defaultActionName": "处理浏览结果列表"
+        }
+    },
+    "dongtai.taobao.com/square/favorited.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG",
+            "pageUpdated": "true"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "店铺动态展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看店铺动态"
+        }
+    },
+    "buy.taobao.com/auction/buy_now.htm": {
+        "similarPage": "buy.taobao.com/auction/buy_now.jhtml"
+    },
+    "jiukuaiyoucom.uz.taobao.com/d/all": {
+        "pageInfo": {
+            "pageClass": "unknow",
+            "pageUpdated": "true"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "defaultTypeName": "错误页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "www.taobao.com/go/act/sns/ui.php": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "空白页面",
+            "defaultTypeName": "页面成分"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "www.taobao.com/go/act/vip/2013/newer.php": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "淘宝会员主页"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看会员活动"
+        }
+    },
+    "siteadmin.taobao.com/module/moduleForm.htm": {
+        "pageInfo": {
+            "pageClass": "unknow",
+            "pageUpdated": "true"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "个人资料页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "个人资料管理行为"
+        }
+    },
+    "try.taobao.com/fuyou_item.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "item_id": ".+"
+                    },
+                    "typeName": "营销详情页"
+                }
+            ],
+            "defaultTypeName": "营销详情页"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看营销详情"
+        }
+    },
+    "wuliu.taobao.com/user/order_detail_old.htm": {
+        "pageInfo": {
+            "pageClass": "UNUSE"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "order_id": ".+"
+                    },
+                    "typeName": "卖家物流管理页面"
+                }
+            ],
+            "defaultTypeName": "卖家物流管理页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "卖家物流管理行为"
+        }
+    },
+    "trade.taobao.com/trade/modify_price.htm": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "bizOrderId": ".+"
+                    },
+                    "typeName": "交易页面"
+                }
+            ],
+            "defaultTypeName": "交易页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "交易行为"
+        }
+    },
+    "rate.taobao.com/remarkSeller4Mall.htm": {
+        "similarPage": "rate.taobao.com/remarkSeller4C.htm"
+    },
+    "siteadmin.taobao.com/category/index.htm": {
+        "pageInfo": {
+            "pageClass": "unknow",
+            "pageUpdated": "true"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "我的淘宝页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "个人资料管理行为"
+        }
+    },
+    "i.taobao.com/feed/index_feed.htm": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "页面成分"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "list.taobao.com/itemlist/baby.htm": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "商品类目展示列表",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "json": "on"
+                    },
+                    "typeName": "页面成分"
+                }
+            ],
+            "defaultTypeName": "商品类目展示列表"
+        },
+        "userActionRules": {
+            "invalidPreUrl": "浏览类目",
+            "diffWithPrePage": {
+                "defaultPage": "浏览类目"
+            },
+            "sameWithPrePage": [
+                {
+                    "paramChange": "q=mod|q=add",
+                    "actionName": "输入检索词检索"
+                },
+                {
+                    "paramChange": "cat=add|sd=add|isprepay=add|cat=mod|sdcat=mod|isprepaycat=mod",
+                    "actionName": "筛选浏览列表"
+                },
+                {
+                    "paramChange": "sort=add|sort=mod",
+                    "actionName": "排序浏览列表"
+                }
+            ],
+            "defaultActionName": "处理浏览结果列表"
+        }
+    },
+    "dongtai.taobao.com/square.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG",
+            "pageUpdated": "true"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "店铺动态展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看店铺动态"
+        }
+    },
+    "i.taobao.com/home.htm": {
+        "pageInfo": {
+            "pageClass": "ADMIPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "我的淘宝页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "个人资料管理行为"
+        }
+    },
+    "mission.jianghu.taobao.com/umissionList.htm": {
+        "pageInfo": {
+            "pageClass": "ADMIPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "淘宝任务盒子"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看会员活动"
+        }
+    },
+    "cu.taobao.com/item_list.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "营销主页"
+        },
+        "userActionRules": {
+            "invalidPreUrl": "进入营销入口",
+            "diffWithPrePage": {
+                "defaultPage": "进入营销入口"
+            },
+            "sameWithPrePage": [
+                {
+                    "paramChange": "guide=mod|guide=add|c1_id=add|c1_id=mod|c2_id=add|c2_id=mod|market=add|market=mod",
+                    "actionName": "筛选浏览列表"
+                },
+                {
+                    "paramChange": "sort=mod|sort=add",
+                    "actionName": "排序浏览列表"
+                }
+            ],
+            "defaultActionName": "进入营销入口"
+        }
+    },
+    "wuliu.taobao.com/user/mailno_validate_sxe.htm": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "页面成分"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "re.taobao.com/p4ptab": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "空白页面",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "catid": ".+"
+                    },
+                    "typeName": "页面成分"
+                },
+                {
+                    "typeCondition": {
+                        "frcatid": ".+"
+                    },
+                    "typeName": "页面成分"
+                }
+            ],
+            "defaultTypeName": "页面成分"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "shuo.taobao.com/microshop/shop_middle_page.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "无效页面",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "shopOwnerId": ".+"
+                    },
+                    "typeName": "店铺动态详情"
+                }
+            ],
+            "defaultTypeName": "店铺动态详情"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看店铺动态"
+        }
+    },
+    "s.click.taobao.com/t_9":{
+    	  "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "defaultTypeName": "错误页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "vip.taobao.com/ten/medal.htm": {
+        "pageInfo": {
+            "usefulParams": {},
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "淘宝会员主页"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看会员活动"
+        }
+    },
+    "www.taobao.com/market/2013/510/bag.php":{
+    	 "pageTypeRules": {
+            "defaultTypeName": "营销详情页"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看营销详情"
+        }
+    },
+    "list.taobao.com/itemlist/nanzhuang2011a.htm":{
+    	"pageTypeRules": {
+            "hasNoParams": "商品类目展示列表",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "json": "on"
+                    },
+                    "typeName": "页面成分"
+                }
+            ],
+            "defaultTypeName": "商品类目展示列表"
+        },
+        "userActionRules": {
+            "invalidPreUrl": "浏览类目",
+            "diffWithPrePage": {
+                "defaultPage": "浏览类目"
+            },
+            "sameWithPrePage": [
+                {
+                    "paramChange": "q=mod|q=add",
+                    "actionName": "输入检索词检索"
+                },
+                {
+                    "paramChange": "cat=add|sd=add|isprepay=add|cat=mod|sdcat=mod|isprepaycat=mod",
+                    "actionName": "筛选浏览列表"
+                },
+                {
+                    "paramChange": "sort=add|sort=mod",
+                    "actionName": "排序浏览列表"
+                }
+            ],
+            "defaultActionName": "处理浏览结果列表"
+        }
+    },
+    "list.taobao.com/market/1/nvzhuang2011a.htm":{
+    	"pageTypeRules": {
+            "hasNoParams": "商品类目展示列表",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "json": "on"
+                    },
+                    "typeName": "页面成分"
+                }
+            ],
+            "defaultTypeName": "商品类目展示列表"
+        },
+        "userActionRules": {
+            "invalidPreUrl": "浏览类目",
+            "diffWithPrePage": {
+                "defaultPage": "浏览类目"
+            },
+            "sameWithPrePage": [
+                {
+                    "paramChange": "q=mod|q=add",
+                    "actionName": "输入检索词检索"
+                },
+                {
+                    "paramChange": "cat=add|sd=add|isprepay=add|cat=mod|sdcat=mod|isprepaycat=mod",
+                    "actionName": "筛选浏览列表"
+                },
+                {
+                    "paramChange": "sort=add|sort=mod",
+                    "actionName": "排序浏览列表"
+                }
+            ],
+            "defaultActionName": "处理浏览结果列表"
+        }
+    },
+    "spu.taobao.com/spu/3c/spulist.htm":{
+    	"pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "defaultTypeName": "商品类目展示列表"
+        },
+        "userActionRules": {
+            "invalidPreUrl": "浏览类目",
+            "diffWithPrePage": {
+                "defaultPage": "浏览类目"
+            },
+            "sameWithPrePage": [
+                {
+                    "paramChange": "q=mod|q=add",
+                    "actionName": "输入检索词检索"
+                },
+                {
+                    "paramChange": "cat=add|pidvid=add|cat=mod|pidvid=mod",
+                    "actionName": "筛选浏览列表"
+                },
+                {
+                    "paramChange": "sort=add|sort=mod",
+                    "actionName": "排序浏览列表"
+                },
+                {
+                    "paramChange": "page=add|page=mod",
+                    "actionName": "翻页浏览列表"
+                }
+            ],
+            "defaultActionName": "处理浏览结果列表"
+        }
+    },
+    "dongtai.taobao.com/hub/new_arrival.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG",
+            "pageUpdated": "true"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "店铺动态展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看店铺动态"
+        }
+    },
+    "dongtai.taobao.com/microshop/front.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG",
+            "pageUpdated": "true"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "店铺动态展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看店铺动态"
+        }
+    },
+    "taoquan.taobao.com/coupon/shopbonus/buyer_apply.htm":{
+    	  "pageInfo": {
+            "pageClass": "INFORPG",
+            "pageUpdated": "true"
+        },
+        "pageTypeRules": {
+        	 "hasNoParams": "错误页面",
+            "defaultTypeName": "营销详情页"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看营销详情"
+        }
+    },
+    "buy.taobao.com/auction/combo/confirm_order.htm": {
+        "pageInfo": {
+            "pageClass": "SUCCESS"
+        },
+        "pageTypeRules": {
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "item_id_num": ".+"
+                    },
+                    "typeName": "确认订单信息页面"
+                }
+            ],
+            "defaultTypeName": "确认订单信息页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "确定订单信息"
+        }
+    },
+    "ju.taobao.com/tg/point_list.htm": {
+        "pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "淘宝营销展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看淘宝营销"
+        }
+    },
+    "refund.taobao.com/fill_refundAgreement.htm": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "refundId": ".+"
+                    },
+                    "typeName": "退款管理页面"
+                }
+            ],
+            "defaultTypeName": "退款管理页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "退款管理"
+        }
+    },
+    "try.taobao.com/list.htm":{
+    	"pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "淘宝营销展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看淘宝营销"
+        }
+    },
+    "try.taobao.com/item/my_try_item.htm":{
+    	"pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "淘宝营销展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看淘宝营销"
+        }
+    },
+    "aq.taobao.com/durex/checkcode": {
+        "pageInfo": {
+            "usefulParams": {},
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "页面成分"
+        },
+        "userActionRules": {
+            "defaultActionName": "获取页面成分"
+        }
+    },
+    "tejia.taobao.com/go/2013/510.htm":{
+    	 "pageTypeRules": {
+            "defaultTypeName": "淘宝营销展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看淘宝营销"
+        }
+    },
+    "tejia.taobao.com/advancedItem.htm":{
+    	 "pageTypeRules": {
+            "defaultTypeName": "淘宝营销展示列表"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看淘宝营销"
+        }
+    },
+    "try.taobao.com/": {
+        "pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "营销主页"
+        },
+        "userActionRules": {
+            "defaultActionName": "进入营销入口"
+        }
+    },
+    "vip.taobao.com/ten/get_medal.htm": {
+        "pageInfo": {
+            "usefulParams": {},
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "淘宝会员主页"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看会员活动"
+        }
+    },
+    "tejia.taobao.com/": {
+        "pageInfo": {
+            "pageClass": "INFORPG"
+        },
+        "pageTypeRules": {
+            "defaultTypeName": "营销主页"
+        },
+        "userActionRules": {
+            "defaultActionName": "进入营销入口"
+        }
+    },
+    "act.ju.taobao.com/go/act/taobao-decennial.php":{
+    	 "pageTypeRules": {
+            "defaultTypeName": "营销详情页"
+        },
+        "userActionRules": {
+            "defaultActionName": "查看营销详情"
+        }
+    },
+    "ju.taobao.com/":{
+    	 "pageTypeRules": {
+            "defaultTypeName": "营销主页"
+        },
+        "userActionRules": {
+            "defaultActionName": "进入营销入口"
+        }
+    },
+    "refund.taobao.com/view_refund_detail_spirit.htm": {
+        "pageInfo": {
+            "pageClass": "unknow"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "withParams": [
+                {
+                    "typeCondition": {
+                        "refundId": ".+"
+                    },
+                    "typeName": "退款管理页面"
+                }
+            ],
+            "defaultTypeName": "退款管理页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "退款管理"
+        }
+    },
+    "upload.taobao.com/auction/sell.jhtml": {
+        "pageInfo": {
+            "pageClass": "UNUSE"
+        },
+        "pageTypeRules": {
+            "hasNoParams": "错误页面",
+            "defaultTypeName": "商品信息管理页"
+        },
+        "userActionRules": {
+            "defaultActionName": "个人资料管理行为"
+        }
+    },
+    "item.taobao.com/auction/noitem.htm":{
+    	 "pageTypeRules": {
+            "hasNoParams": "空白页面",
+            "defaultTypeName": "错误页面"
+        },
+        "userActionRules": {
+            "defaultActionName": "系统行为"
+        }
+    },
+    "try.taobao.com/item/yugao.htm" :{
+    	 "similarPage": "try.taobao.com/list.htm"
+    },
+    "container.open.taobao.com/container": {
+        "similarPage": "container.api.taobao.com/container"
+    },
+    "list.taobao.com/itemlist/fashion.htm": {
+        "similarPage": "list.taobao.com/itemlist/default.htm"
+    },
+    "beyondListPages": {
+        "pageInfo": {
+            "uselessParams": {
+                "spm": "追溯信息"
+            },
+            "pageClass": "unknown"
+        },
+        "urlRules": [
+            {
+                "urlCondition": {
+                    "url": ".*[a-zA-z0-9]+\\.taobao\\.com.*",
+                    "content_key": "span[class=shop-name]",
+                    "content_value": "店铺"
+                },
+                "typeName": "店铺详情页",
+                "defaultActionName": "查看店铺详情"
+            }
+        ],
+		"defaultTypeName": "未知类型",
+		"defaultActionName": "未知行为"
+    }
+}
